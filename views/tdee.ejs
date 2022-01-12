@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/javascripts/tdee.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="basinf">
+        <p class="mail">Email:wonbin12300@gmail.com</p>
+        <p class="tel">Tel:+886 987878788</p>
+      </div>
+      <div class="search">
+        <input type="text" id="search" placeholder="請輸入關鍵字" />
+        <a id="searchicon" href="#"
+          ><img src="images/search.png" width="15px"
+        /></a>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="logo">
+        <a href="http://localhost:3000"
+          ><img src="images/logo.png" width="120px" alt="Fitness Base"
+        /></a>
+        <h1>Fitness Base</h1>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="http://localhost:3000">首頁</a></li>
+          <li><a href="https://google.com" target="_blank">肌肉剖析</a></li>
+          <li><a href="https://google.com" target="_blank">訓練資訊</a></li>
+          <li><a href="http://localhost:3000/tdee">TDEE計算機</a></li>
+          <li><a href="http://localhost:3000/store">購物商城</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="wrap">
+        <div class="tdee">
+          <label for="gender">性別：</label>
+          <select name="gender" id="gender">
+            <option value="male">男生</option>
+            <option value="female">女生</option>
+          </select>
+          <br /><br />
+          <label for="height">身高：</label>
+          <input type="text" name="height" id="height" height="50px" />
+          <br /><br />
+          <label for="weight">體重：</label>
+          <input type="text" name="weight" id="weight" />
+          <br /><br />
+          <label for="age">年齡：</label>
+          <input type="text" name="age" id="age" />
+          <br /><br />
+          <label for="activitylevel">日常活動量：</label>
+          <select name="activitylevel" id="activitylevel">
+            <option value="l">沒在運動</option>
+            <option value="lm">每周運動1-3天</option>
+            <option value="m">每周運動3-5天</option>
+            <option value="mh">每周運動6-7天</option>
+            <option value="h">每天都在運動</option>
+          </select>
+          <br /><br />
+          <button type="button" id="btn" onclick="tdee()">計算</button>
+          <br /><br />
+          <span id="bmr">基礎代謝率(BMR)：</span>
+          <br />
+          <br />
+          <span id="tdee">總熱量消耗(TDEE)：</span>
+        </div>
+        <div class="tdeetbody">
+          <table>
+            <tr>
+              <th>活動量</th>
+              <th>活動量描述</th>
+              <th>TDEE計算方法</th>
+            </tr>
+            <tr>
+              <td>久坐</td>
+              <td>沒在運動</td>
+              <td>TDEE = 1.2 x BMR</td>
+            </tr>
+            <tr>
+              <td>輕量運動</td>
+              <td>每周運動1-3天</td>
+              <td>TDEE = 1.375 x BMR</td>
+            </tr>
+            <tr>
+              <td>中度活動量</td>
+              <td>每周運動3-5天</td>
+              <td>TDEE = 1.55 x BMR</td>
+            </tr>
+            <tr>
+              <td>高度活動量</td>
+              <td>每周運動6-7天</td>
+              <td>TDEE = 1.725 x BMR</td>
+            </tr>
+            <tr>
+              <td>非常高度活動量</td>
+              <td>每天都在運動</td>
+              <td>TDEE = 1.9 x BMR</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

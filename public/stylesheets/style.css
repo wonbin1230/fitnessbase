@@ -1,0 +1,288 @@
+body{
+    font-family: DFKai-sb;
+    color: white;
+    background-color: rgb(165, 165, 165);
+    background-image: url(../images/bg3.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.555);
+    height: 30px;
+    width: 0 auto;
+}
+
+.basinf{
+    display: flex;
+    width: 0 auto;
+}
+
+.mail{
+    padding-left: 20px;
+    padding-right: 10px;
+    color: white;
+    font-family: monospace;
+}
+
+.tel{
+    padding-left: 10px;
+    padding-right: 20px;
+    color: white;
+    font-family: monospace;
+}
+
+.search{
+    margin-right: 20px;
+}
+
+#search{
+    height: 20px;
+    width: 200px;
+}
+
+#searchicon:hover{
+    background-color: gray;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1{
+    color: white;
+    font-size: 70px;
+    font-family: fantasy;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.555);
+}
+
+.list ul{
+    display: flex;
+    margin-right: 30px;
+}
+
+.list ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    padding: 0 50px 0 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.list ul a:hover{
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    padding: 0 50px 0 50px;
+}
+
+.list ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    width: 100px;
+    height: 100px;
+}
+
+/* 首頁 */
+.content{
+    background-color: rgba(0, 0, 0, 0.555);
+    margin: 30px 50px 0 50px;
+}
+
+.wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
+.player{
+    margin: auto;
+    width: 440px;
+    margin-top: 30px;
+    color: white;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.player img{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.player p{
+    font-size: 23px;
+}
+
+/*商城*/
+.productmenu{
+    text-align: center;
+    background-color: rgba(110, 110, 110, 0.267);
+    width: 500px;
+}
+
+.productmenu ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.productmenu li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.productmenu li:hover{
+    background-color: rgba(99, 98, 98, 0.267);
+}
+
+.productmenu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.productlist{
+    width: 1200px;
+    color: white;
+}
+
+.productlist li{
+    position: relative;
+    float: left;
+    width: 278px;
+    height: 450px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+.productlist .sale{
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.productlist img{
+    width: 100%;
+}
+
+.productlist h2{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.productlist span{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.shoppingcart img{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/*TDEE計算器*/
+.tdee{
+    font-size: 30px;
+    color: white;
+    width: 50%;
+    padding: 50px;
+}
+
+.tdee #height , #weight , #age{
+    height: 25px;
+    width: 50%;
+}
+
+.tdee #gender , #activitylevel{
+    height: 30px;
+    width: 50%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tdee #btn{
+    background-color: rgba(100, 100, 100, 0.568);
+    border: 2px solid rgba(187, 186, 186, 0.603);
+    color: white;
+    border-radius: 20px;
+    font-family: DFKai-sb;
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.tdee #btn:hover{
+    background-color: rgb(161, 161, 161);
+}
+
+.tdeetbody{
+    width: 50%;
+    padding: 50px;
+}
+
+.tdeetbody th , .tdeetbody td{
+    border-top: 1px solid rgba(148, 147, 147, 0.24);
+    border-bottom: 1px solid rgba(148, 147, 147, 0.781);
+}
+
+.tdeetbody th{
+    background-color: rgba(148, 147, 147, 0.24);
+    font-size: 30px;
+    padding: 20px 40px 20px 40px;
+}
+
+.tdeetbody td{
+    font-size: 20px;
+    padding: 20px 0 20px 40px;
+}
+
+.tdeetbody tr:hover{
+    background-color: rgba(148, 147, 147, 0.24);
+}
