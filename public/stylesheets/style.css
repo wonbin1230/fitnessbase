@@ -1,48 +1,48 @@
 body{
     font-family: DFKai-sb;
     color: white;
-    background-color: rgb(165, 165, 165);
+    background-color: black;
     background-image: url(../images/bg3.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .header{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.555);
     height: 30px;
-    width: 0 auto;
+    width: 100%;
 }
 
 .basinf{
+    box-sizing: border-box;
+    width: 50%;
     display: flex;
-    width: 0 auto;
-}
-
-.mail{
+    flex-wrap: wrap;
     padding-left: 20px;
     padding-right: 10px;
     color: white;
     font-family: monospace;
 }
 
-.tel{
-    padding-left: 10px;
-    padding-right: 20px;
-    color: white;
-    font-family: monospace;
-}
-
 .search{
-    margin-right: 20px;
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 20px;
+    text-align: right;
 }
 
 #search{
     height: 20px;
-    width: 200px;
+    max-width: 300px;
 }
 
 #searchicon:hover{
@@ -53,22 +53,25 @@ body{
     display: flex;
     justify-content: space-between;
     height: 100px;
+    width: 100%;
     margin-top: 30px;
     background-color: rgba(0, 0, 0, 0.555);
 }
 
-.menu .logo a{
-    position: relative;
-    top: -20px;
-    color: white;
-    font-size: 70px;
-    font-family: fantasy;
-    text-decoration: none;
+.menu .logo{
+    width: 100%;
 }
 
-.menu .logo img{
-    position: relative;
-    top: 20px;
+.menu .logo a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    color: white;
+    font-size: 50px;
+    font-family: fantasy;
+    text-decoration: none;
 }
 
 .list ul{
@@ -106,6 +109,7 @@ body{
 
 .content{
     background-color: rgba(0, 0, 0, 0.555);
+    height: 100%;
     margin: 30px 50px 0 50px;
 }
 
@@ -116,7 +120,7 @@ body{
 
 /* 首頁 */
 .swiper {
-    height: 750px;
+    height: 100%;
     max-width: 1920px;
   }
 
@@ -125,7 +129,7 @@ body{
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1500px;
-    margin-top: 5%;
+    margin: 5% auto;
     color: white;
 }
 
@@ -143,6 +147,7 @@ body{
 }
 
 .player .info p{
+    text-align: left;
     font-size: 23px;
 }
 
@@ -289,12 +294,17 @@ body{
 }
 
 /* RWD */
-@media (max-width: 768px) {
-    .menu{
-        display: block;
+@media (max-width: 1023px) {
+    .content{
+        position: relative;
+        top: 30px;
     }
 
-    .logo{
+    .menu{
+        display: inline-block;
+    }
+
+    .menu .logo a{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -307,14 +317,51 @@ body{
 
     .list ul li{
         box-sizing: border-box;
+        padding: 10px 0;
         width: 50%;
         height: 100%;
-        padding-top: 10px;
         border: 1px solid gray;
     }
 
+    /* 首頁 */
+    .player{
+        display: block;
+        text-align: center;
+    }
+
     .player img{
-        max-width: 300px;
-        max-height: 300px;
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .player .info p{
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 399px){
+    .content{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    #search{
+        width: 100px;
+    }
+
+    /* 首頁 */
+    .player .info h2{
+        font-size: 35px;
+    }
+
+    .player .info p{
+        font-size: 16px;
+    }
+
+    .player img{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
     }
 }
